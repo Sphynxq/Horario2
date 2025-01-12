@@ -16,11 +16,5 @@ interface Materia {
 }
 
 export default function Home() {
-  const [materias, setMaterias] = useState<Materia[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
-  const [nombre, setNombre] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-
+  return <div>Hello World</div>;
 }
