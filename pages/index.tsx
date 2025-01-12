@@ -4,6 +4,7 @@ import LoginComponent from './login';
 import { useRouter } from 'next/router';
 
 export default function Home() {
+<<<<<<< HEAD
   const [showLogin, setShowLogin] = useState<boolean>(false);
   const [showRegister, setShowRegister] = useState<boolean>(false);
   const router = useRouter();
@@ -64,3 +65,7 @@ export default function Home() {
 }
 
 
+=======
+  return <div>Hello World</div>;
+}
+>>>>>>> 71da575c8b890af63d4437d1dab9e0c2eab9c59d
