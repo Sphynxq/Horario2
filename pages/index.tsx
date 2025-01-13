@@ -45,8 +45,9 @@ export default function Home() {
         <RegisterComponent onSuccess={handleRegistrationSuccess} />
       ) : (
         <div className="flex flex-col items-center">
-          <h1 className="text-2xl font-bold">Bienvenido</h1>
-          <p className="mt-4">Por favor, inicia sesión o regístrate.</p>
+          <h1 className="text-4xl font-bold">Este proyecto está diseñado para facilitar la elaboración de tu horario</h1>
+          <br></br> 
+          <h1 className="text-2xl ">(Es una beta puede contener errores)</h1>
         </div>
       )}
 

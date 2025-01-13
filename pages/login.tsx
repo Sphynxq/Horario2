@@ -46,7 +46,7 @@ const LoginComponent: React.FC<{ onSuccess: () => void; setShowLogin: (value: bo
         <h2 className="mt-6 text-center text-4xl font-extrabold text-gray-900">
           Iniciar sesión
         </h2>
-        {session ? (
+        {session?.user ? (
           <div className="flex flex-col items-center">
             <p className="text-lg">Bienvenido, {session.user.email}</p>
             <button

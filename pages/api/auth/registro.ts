@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { MongoClient, Document } from 'mongodb';
 import bcrypt from 'bcrypt';
 
-const uri: string = process.env.MONGODB_URI || 'mongodb+srv://Mataviejas:rCDeH9gFN6iN6tp@cluster0.olr1x.mongodb.net/'; // Asegúrate de tener la URI de MongoDB en tus variables de entorno
+const uri: string = process.env.MONGODB_URI || 'mongodb+srv://Mataviejas:rCDeH9gFN6iN6tp@cluster0.olr1x.mongodb.net/';
 const client = new MongoClient(uri);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
