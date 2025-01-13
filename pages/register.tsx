@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
+import AuthGoogle from '@/components/authgoogle';
 
 const RegisterComponent: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
   const [nombre, setNombre] = useState<string>('');
@@ -22,7 +23,7 @@ const RegisterComponent: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) =
       });
 
       console.log('Usuario registrado:', response.data);
-      onSuccess();
+      onSuccess(); // Llama a la función onSuccess al completar el registro
     } catch (error) {
       setError(error instanceof Error ? error.message : 'Error desconocido');
     } finally {
@@ -33,7 +34,7 @@ const RegisterComponent: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) =
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#99C7F0] p-4">
       <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+        <h2 className="mt-6 text-center text-4xl font-extrabold text-gray-900">
           Crear una cuenta
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
@@ -117,6 +118,11 @@ const RegisterComponent: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) =
             {isLoading ? 'Registrando...' : 'Crear cuenta'}
           </button>
         </form>
+
+        {/* Botón de SignIn de Google */}
+        <div className="mt-4">
+          <AuthGoogle />
+        </div>
       </div>
     </div>
   );
