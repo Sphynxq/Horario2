@@ -6,17 +6,16 @@
 }
 
 .selectorContainer {
-    margin: 20px;
+    display: flex;
+    gap: 1rem;
 }
 
 .selector {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #009879;
-    border-radius: 5px;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db;
     background-color: white;
     min-width: 200px;
-    cursor: pointer;
 }
 
 .selector:focus {
@@ -50,44 +49,33 @@
     width: 100%;
     border-collapse: collapse;
     background-color: white;
-    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.tablaResponsive th,
+.tablaResponsive td {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #ddd;
 }
 
 .tablaResponsive th {
     background-color: #009879;
     color: white;
-    padding: 12px 15px;
-    text-align: left;
     font-weight: bold;
-}
-
-.tablaResponsive td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #dddddd;
 }
 
 .tablaResponsive tr:nth-child(even) {
     background-color: #f5f5f5;
 }
 
-.tablaResponsive tr:hover {
-    background-color: #f0f0f0;
+.tablaResponsive td {
+    white-space: nowrap;
 }
 
-.tablaResponsive tr:last-of-type {
-    border-bottom: 2px solid #009879;
-}
-
-@media screen and (max-width: 600px) {
-    .tablaResponsive {
-        margin: 10px;
-    }
-    
-    .tablaResponsive th,
-    .tablaResponsive td {
-        padding: 8px 10px;
-        font-size: 14px;
-    }
+.tablaResponsive .materia {
+    white-space: normal;
+    min-width: 200px;
 }
 
 .headerContainer {
@@ -121,4 +109,34 @@
     margin: 30px 0;
     padding: 20px;
     font-family: Arial, sans-serif;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #007860;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.error {
+    background-color: #fee2e2;
+    border: 1px solid #ef4444;
+    color: #dc2626;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.materiaExtra {
+    background-color: #fef3c7 !important; /* Color amarillo claro */
+    font-style: italic;
+}
+
+.materiaExtra td {
+    border-color: #fcd34d !important;
 }
